@@ -50,7 +50,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run verify",
+      "pre-commit": "sh ./scripts/check-branch.sh && npm run verify",
       "pre-push": "npm run verify && npm run build:prod",
       "pre-merge": "npm run verify"
     }
